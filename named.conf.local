@@ -8,15 +8,12 @@
 
 
 zone "in.iutbeziers.fr" {
-	type slave;
-	masters {;
+	type master;
+	file "/etc/bind/db.in.iutbeziers.fr";
 };
 
-zone "1.168.192.in-addr.arpa"{
-	type slave;
-	file "/etc/bind/db.192.168.1";
+zone "14.202.10.in-addr.arpa"{
+	type master;
+	file "/etc/bind/db.10.202.14";
 };
-
-allow-query-cache { any; };
-allow-query { any; };
 
